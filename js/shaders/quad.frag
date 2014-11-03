@@ -2,10 +2,7 @@ precision highp float;
 
 varying vec2 vCoordinate;
 
-void drawGradient( inout vec3 color ) {
-  //color = vec3( 0.5 + 0.5 * vCoordinate.x, 0.5 + 0.5 * vCoordinate.y, 0.0 );
-  color = vec3( 0.5 + 0.5 * vCoordinate, 0.0 );
-}
+#include drawGradient.glsl
 
 void main() {
   vec3 color = vec3( 0.0 );
