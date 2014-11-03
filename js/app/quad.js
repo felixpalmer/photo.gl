@@ -8,7 +8,7 @@ define( [ 'gl', 'utils', 'shader!quad.vert', 'shader!quad.frag' ], function ( gl
       gl.useProgram( program );
 
       // Get handle on coordinate attribute in shader
-      var coordinate = gl.getAttribLocation( program, 'coordinate' );
+      var coordinate = gl.getAttribLocation( program, 'aCoordinate' );
 
       // Create a buffer to will hold the quad vertex data (defined in clip-space)
       var buffer = gl.createBuffer();
