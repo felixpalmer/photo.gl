@@ -1,9 +1,12 @@
-define( ["container"],
-function ( container ) {
+define( [ 'quad' ], function ( quad ) {
   var app = {
     init: function () {
-      container.innerHTML = 'Hello';
+      app.render();
     },
+    render: function() {
+      requestAnimationFrame( app.render );
+      quad.draw();
+    }
   };
 
   return app;
