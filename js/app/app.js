@@ -1,9 +1,8 @@
-define( ["container"],
-function ( container ) {
+define( [ 'quad' ], function ( quad ) {
   var app = {
     init: function () {
-      container.innerHTML = 'Hello';
-    },
+      quad.draw();
+    }
   };
 
   return app;
