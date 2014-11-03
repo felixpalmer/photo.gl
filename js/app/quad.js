@@ -1,14 +1,15 @@
-define( [ 'gl', 'utils', 'shader!quad.vert', 'shader!quad.frag' ], function ( gl, utils, quadVert, quadFrag ) {
+define( [ 'gl', 'params', 'utils', 'shader!quad.vert', 'shader!quad.frag' ],
+function ( gl, params, utils, quadVert, quadFrag ) {
   var quad = {
     init: function () {
       console.log( 'Initialized quad with context', gl );
 
       // Create shader program for quad
-      var program = utils.createProgram( quadVert.value, quadFrag.value );
-      gl.useProgram( program );
+      quad.program = utils.createProgram( quadVert.value, quadFrag.value );
+      gl.useProgram( quad.program );
 
       // Get handle on coordinate attribute in shader
-      var coordinate = gl.getAttribLocation( program, 'aCoordinate' );
+      var coordinate = gl.getAttribLocation( quad.program, 'aCoordinate' );
 
       // Create a buffer to will hold the quad vertex data (defined in clip-space)
       var buffer = gl.createBuffer();
@@ -44,6 +45,11 @@ define( [ 'gl', 'utils', 'shader!quad.vert', 'shader!quad.frag' ], function ( gl
       };
     },
     draw: function () {
+      // Update uniforms from params object
+      var p = gl.getUniformLocation( quad.program, 'uBlackAndWhite' );
+      gl.uniform1i( p, params.blackAndWhite );
+      
+      
       gl.drawArrays( gl.TRIANGLES, 0, quad.vertices.length / 2 );
     }
   };
