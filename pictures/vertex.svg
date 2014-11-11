@@ -1,0 +1,17 @@
+<svg width="420" height="420" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" height="360" width="360" y="30" x="30" stroke-width="5" stroke="#000000" fill="none"/>
+  <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_8" y="60" x="362.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">1,1</text>
+  <text id="svg_9" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="60" x="85.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">-1,1</text>
+  <line id="svg_2" y2="390" x2="390" y1="30" x1="30" stroke-width="5" stroke="#000000" fill="none"/>
+  <ellipse rx="29" id="svg_4" cy="167" cx="49.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="#007fff"/>
+  <text id="svg_10" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="370" x="64.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">-1,-1</text>
+  <ellipse id="svg_5" ry="15" rx="15" cy="390" cx="30" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="#007fff"/>
+  <ellipse ry="15" rx="15" id="svg_3" cy="30" cx="30" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="#007fff"/>
+  <ellipse id="svg_6" ry="15" rx="15" cy="390" cx="390" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="#007fff"/>
+  <ellipse id="svg_7" ry="15" rx="15" cy="30" cx="390" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="#007fff"/>
+  <text id="svg_11" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="370" x="324.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">1,-1</text>
+ </g>
+</svg>

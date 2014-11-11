@@ -16,7 +16,7 @@ define( [ 'dat', 'params', 'quad' ], function ( dat, params, quad ) {
       app.render();
     },
     render: function() {
-      requestAnimationFrame( app.render );
+      requestAnimationFrame( app.render ); // Enable for continuous rendering
       quad.draw();
     }
   };

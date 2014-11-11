@@ -1,5 +1,7 @@
 precision highp float;
 
+uniform sampler2D uImage;
+
 uniform bool uBlackAndWhite;
 
 varying vec2 vCoordinate;
@@ -14,6 +16,9 @@ void main() {
   color = drawGradient();
   color = drawImage();
   if ( uBlackAndWhite ) color = toBW( color );
+
+  vec2 uv = vUv;
+  color = texture2D( uImage, uv ).rgb;
 
   gl_FragColor = vec4( color.rgb, 1.0 );
 }
