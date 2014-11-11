@@ -29,7 +29,7 @@ function ( gl, params, utils, quadVert, quadFrag ) {
       // Create texture that we will load image into
       quad.image = gl.createTexture();
     },
-    loadImage: function ( url ) {
+    loadImage: function ( url, onload ) {
       // Load image from url
       var image = new Image();
       image.src = url;
@@ -42,6 +42,7 @@ function ( gl, params, utils, quadVert, quadFrag ) {
         gl.texParameteri( gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST );
         gl.texParameteri( gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST );
         gl.texImage2D( gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image );
+        if ( onload ) onload();
       };
     },
     draw: function () {

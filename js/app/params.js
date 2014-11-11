@@ -1,6 +1,7 @@
 define( function () {
   // Define the parameters that are passed into the shader as uniforms
   return {
-    blackAndWhite: false
+    blackAndWhite: false,
+    image: 'goat.jpg'
   };
 } );
