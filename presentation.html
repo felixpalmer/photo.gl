@@ -181,9 +181,26 @@
         <img class="small" src="pictures/fragment.svg">
 	</div></section>
 	<section class="slide"><div>
+		<h2>Pipeline</h2>
+        <ul>
+            <li>3 types of variables to pass around data:</li>
+            <ol>
+              <li><code>uniform</code> global information</li>
+              <li><code>varying</code> flow from vertex to fragment shader, interpolated</li>
+              <li><code>attribute</code> per vertex information</li>
+            </ol>
+        </ul>
+        <img class="small" src="pictures/pipeline.svg">
+    </div></section>
+	<section class="slide"><div>
 		<h2>WebGL basics - recap</h2>
 		<ul>
-			<li>...</li>
+            <li>Ask <code>canvas</code> for a WebGL context</li>
+            <li>Build <code>quad</code> to render</li>
+            <li>Write shaders: <code>vertex</code> &amp; <code>fragment</code></li>
+			<li>Compile into program (in browser)</li>
+            <li>Pass data into program using <code>uniforms</code> and <code>attributes</code></li>
+            <li>Output is rendered into <code>canvas</code> element</li>
 		</ul>
 	</div></section>
 	<section class="slide cover fullscreen" id="Thanks"><div>

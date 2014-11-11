@@ -1,0 +1,24 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#7c7c7c" id="svg_9" height="133.588255" width="233.529399" y="57.941163" x="16.470586" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none"/>
+  <rect stroke="#7c7c7c" id="svg_1" height="290.588247" width="235.882341" y="60.58824" x="349.999995" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none"/>
+  <rect id="svg_8" stroke="#7c7c7c" height="45.294117" width="224.705872" y="128.235296" x="356.176491" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none"/>
+  <text id="svg_5" stroke="#7c7c7c" xml:space="preserve" text-anchor="middle" font-family="Sans-serif" font-size="24" y="277.750012" x="465.868243" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Fragment shader</text>
+  <rect id="svg_4" stroke="#7c7c7c" height="45.294117" width="224.705872" y="249.411761" x="355.000008" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none"/>
+  <text id="svg_6" stroke="#7c7c7c" xml:space="preserve" text-anchor="middle" font-family="Sans-serif" font-size="24" y="89.1218" x="469.116404" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">WebGL program</text>
+  <text style="cursor: move;" id="svg_7" stroke="#7c7c7c" xml:space="preserve" text-anchor="middle" font-family="Sans-serif" font-size="24" y="156.573548" x="467.044726" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">Vertex shader</text>
+  <text xml:space="preserve" text-anchor="middle" font-family="Sans-serif" font-size="24" id="svg_12" y="145.882353" x="187.058818" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#7c7c7c" fill="#000000">attributes</text>
+  <text id="svg_13" xml:space="preserve" text-anchor="middle" font-family="Sans-serif" font-size="24" y="172.662227" x="189.71001" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#7c7c7c" fill="#000000">uniforms</text>
+  <text style="cursor: move;" id="svg_10" stroke="#7c7c7c" xml:space="preserve" text-anchor="middle" font-family="Sans-serif" font-size="24" y="86.474724" x="135.586995" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">JavaScript</text>
+  <text id="svg_14" xml:space="preserve" text-anchor="middle" font-family="Sans-serif" font-size="24" y="215.381374" x="469.704952" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#7c7c7c" fill="#000000">varyings</text>
+  <line stroke="#7c7c7c" id="svg_16" y2="139.411765" x2="355.97934" y1="139.411765" x1="238.823525" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none"/>
+  <line stroke="#7c7c7c" id="svg_17" y2="163.529412" x2="356.483957" y1="163.529412" x1="237.058822" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none"/>
+  <line stroke="#7c7c7c" id="svg_18" y2="170.588235" x2="297.135906" y1="170.588235" x1="237.647059" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none"/>
+  <line stroke="#7c7c7c" id="svg_19" y2="271.764706" x2="297.190455" y1="271.764706" x1="355.294117" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none"/>
+  <line stroke="#7c7c7c" id="svg_20" y2="170.126556" x2="297.153434" y1="272.287129" x1="297.153434" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="none"/>
+  <line id="svg_21" y2="200.004807" x2="464" y1="174" x1="464" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#7c7c7c" fill="none"/>
+  <line id="svg_22" y2="249.438072" x2="464.227199" y1="223.433265" x1="464.227199" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#7c7c7c" fill="none"/>
+ </g>
+</svg>
