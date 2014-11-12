@@ -17,8 +17,8 @@ function ( gl, params, utils, quadVert, quadFrag ) {
 
       // Define 2 triangles that will form our quad
       quad.vertices = new Float32Array( [
-        -1.0, -1.0, 1.0, -1.0, -1.0,  1.0, // 1st triangle
-        -1.0, 1.0, 1.0, -1.0, 1.0,  1.0 // 2nd triangle
+        -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, // 1st triangle
+        -1.0, 1.0, 1.0, -1.0, 1.0, 1.0 // 2nd triangle
       ] );
 
       // Put vertices into buffer

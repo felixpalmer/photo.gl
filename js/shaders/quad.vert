@@ -5,6 +5,8 @@ attribute vec2 aCoordinate;
 varying vec2 vCoordinate;
 varying vec2 vUv;
 
+#include rotate.glsl
+
 void main() {
   // Clip space coordinates ( range: -1 -> 1 )
   vCoordinate = aCoordinate;

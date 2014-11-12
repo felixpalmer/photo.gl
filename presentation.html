@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Image editing with WebGL</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+        <style>
+          .slide .right, .slide.cover .right {
+              height: 100%;
+              width: 25%;
+              top: 0;
+              left: auto;
+              right: 0;
+              position: absolute;
+          }
+          .tiny {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 200px;
+              width: 200px;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .tiny-top {
+              position: absolute;
+              right: 2%;
+              top: 3%;
+              height: 200px;
+              width: 200px;
+              box-shadow: 2px 2px 10px black;
+          }
+          .small {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 40%;
+              width: 40%;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .small-top {
+              position: absolute;
+              right: 2%;
+              top: 3%;
+              height: 40%;
+              width: 40%;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .medium {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 50%;
+              width: 96%;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .tiny, .tiny-top, .small-top, .small, .medium {
+              background-color: white;
+          }
+
+          .tiny:hover, .tiny-top:hover, .small-top:hover, .small:hover, .medium:hover {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 94%;
+              width: 96%;
+          }
+
+          .slide code {
+            font-size: 16pt;
+          }
+
+          .fullscreen h2 {
+              margin:10px 0 0;
+              color:#FFF;
+              text-align:center;
+              font-size:80px;
+              text-shadow: 1px 1px 7px #000;
+          }
+          .fullscreen p {
+              margin:10px 0 0;
+              text-align:center;
+              color:#FFF;
+              font-style:italic;
+              font-size:30px;
+              text-shadow: 1px 1px 7px #000;
+          }
+          .fullscreen p a {
+              color:#FFF;
+          }
+          .fullscreen img {
+              height:100%;
+          }
+        </style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Building Photoshop in JavaScript &amp; WebGL</h1>
+		<p>Felix Palmer | @pheeelicks | www.pheelicks.com</p>
+	</header>
+	<section class="slide cover fullscreen"><div>
+		<h2>Building Photoshop in JavaScript &amp; WebGL</h2>
+        </br>
+		<p>Felix Palmer | @pheeelicks | www.pheelicks.com</p>
+        <p>Slides: <a href="http://felixpalmer.github.io/photo.gl/presentation.html">felixpalmer.github.io/photo.gl/presentation.html</a></p>
+        <p>Code: <a href="https://github.com/felixpalmer/photo.gl">github.com/felixpalmer/photo.gl</a></p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Overview</h2>
+		<ul>
+			<li>WebGL basics</li>
+			<li>Building out the app</li>
+			<li>Image manipulation</li>
+		</ul>
+        </br>
+        </br>
+        <p>Slides: <a href="http://felixpalmer.github.io/photo.gl/presentation.html">felixpalmer.github.io/photo.gl/presentation.html</a></p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>WebGL basics</h2>
+		<ul>
+            <li>Ask <code>canvas</code> for a WebGL context</li>
+            <li>Build <code>quad</code> to render</li>
+            <li>Write shaders: <code>vertex</code> &amp; <code>fragment</code></li>
+			<li>Compile into program (in browser)</li>
+            <li>Pass data into program using <code>uniforms</code> and <code>attributes</code></li>
+            <li>Output is rendered into <code>canvas</code> element</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Getting a WebGL context</h2>
+        <code>var canvas = document.createElement( 'canvas' );</code></br>
+        <code>canvas.width = container.offsetWidth;</code></br>
+        <code>canvas.height = container.offsetHeight;</code></br>
+        <code>container.appendChild( canvas );</code></br>
+        <code>var gl = canvas.getContext( 'webgl' );</code></br>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Define a quad</h2>
+        <code>quad.vertices = new Float32Array( [</code></br>
+        <code>&nbsp;&nbsp;-1.0, -1.0, 1.0, -1.0, -1.0, 1.0, // 1st triangle</code></br>
+        <code>&nbsp;&nbsp;-1.0, 1.0, 1.0, -1.0, 1.0, 1.0 // 2nd triangle</code></br>
+        <code>] );</code></br>
+        <img class="small" src="pictures/vertex.svg">
+	</div></section>
+	<section class="slide"><div>
+		<h2>Write shaders</h2>
+		<ul>
+            <li>Vertex shader manipulates vertices</li>
+            <li>Fragment shader draws pixels</li>
+        </ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Vertex shader</h2>
+        <code>attribute vec2 aCoordinate;</code></br>
+        <code>varying vec2 vCoordinate;</code></br>
+        <code>void main() {</code></br>
+        <code>&nbsp;&nbsp;gl_Position = vec4( aCoordinate, 0, 1 );</code></br>
+        <code>}</code></br>
+        <img class="tiny" src="pictures/vertex.svg">
+	</div></section>
+	<section class="slide"><div>
+		<h2>Fragment shader</h2>
+        <code>varying vec2 vCoordinate;</code></br>
+        <code>void main() {</code></br>
+        <code>&nbsp;&nbsp;gl_FragColor = vec4( vCoordinate, 0.0, 1.0 );</code></br>
+        <code>}</code></br>
+        <img class="small" src="pictures/fragment.svg">
+	</div></section>
+	<section class="slide"><div>
+		<h2>Pipeline</h2>
+        <ul>
+            <li>3 types of variables to pass around data:</li>
+            <ol>
+              <li><code>uniform</code> global information</li>
+              <li><code>varying</code> flow from vertex to fragment shader, interpolated</li>
+              <li><code>attribute</code> per vertex information</li>
+            </ol>
+        </ul>
+        <img class="small" src="pictures/pipeline.svg">
+    </div></section>
+	<section class="slide"><div>
+		<h2>WebGL basics - recap</h2>
+		<ul>
+            <li>Ask <code>canvas</code> for a WebGL context</li>
+            <li>Build <code>quad</code> to render</li>
+            <li>Write shaders: <code>vertex</code> &amp; <code>fragment</code></li>
+			<li>Compile into program (in browser)</li>
+            <li>Pass data into program using <code>uniforms</code> and <code>attributes</code></li>
+            <li>Output is rendered into <code>canvas</code> element</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Building out the app</h2>
+		<ul>
+            <li>App boilerpate</li>
+            <li>Setting up the WebGL context</li>
+            <li>Shader compilation</li>
+			<li>Simple shaders</li>
+			<li>Hook up a GUI</li>
+            <li>Pass data into program using <code>uniforms</code> and <code>attributes</code></li>
+            <li>Load in an image</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Image manipulation</h2>
+		<ul>
+            <li>Scaling, translating &amp; rotating</li>
+            <li>Simple colour tricks</li>
+            <li>Warping</li>
+			<li>Pixel effects</li>
+			<li>Blending</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Scaling, translating &amp; rotating</h2>
+		<ul>
+            <li>Most natural to do this in vertex shader</li>
+            <li>Scaling is just multiplication</li>
+            <li>Translating just addition</li>
+			<li>For rotation need to use a matrix</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Simple colur tricks</h2>
+		<ul>
+            <li>Swapping colour channels</li>
+            <li>Converting to greyscale</li>
+            <li>Gamma</li>
+			<li>Color isolation</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Warping</h2>
+		<ul>
+            <li>Stretching</li>
+            <li>Fisheye</li>
+            <li>Twirl</li>
+            <li>Waves</li>
+            <li>Radial waves</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Pixel effects</h2>
+		<ul>
+            <li>Pixellating</li>
+            <li>Region pixellation</li>
+            <li>Vignette</li>
+            <li>Blending mulitple images</li>
+		</ul>
+	</div></section>
+	<section class="slide cover fullscreen" id="Thanks"><div>
+		<h2>Thanks</h2>
+        </br>
+		<p>Felix Palmer | @pheeelicks | www.pheelicks.com</p>
+        <p>Slides: <a href="http://felixpalmer.github.io/photo.gl/presentation.html">felixpalmer.github.io/photo.gl/presentation.html</a></p>
+        <p>Code: <a href="https://github.com/felixpalmer/photo.gl">github.com/felixpalmer/photo.gl</a></p>
+	</div></section>
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
