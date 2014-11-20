@@ -1,5 +1,10 @@
 precision highp float;
 
+uniform float uA;
+uniform float uB;
+uniform float uC;
+uniform float uD;
+
 attribute vec2 aCoordinate;
 
 varying vec2 vCoordinate;

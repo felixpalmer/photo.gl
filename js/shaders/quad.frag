@@ -16,6 +16,10 @@ varying vec2 vUv;
 #include drawImage.glsl
 #include toBW.glsl
 #include polar.glsl
+#include fisheye.glsl
+#include twirl.glsl
+#include pixellate.glsl
+#include vignette.glsl
 
 void main() {
   vec3 color = vec3( 0.0 );
@@ -28,7 +32,5 @@ void main() {
   color = texture2D( uImage, uv ).rgb;
 
   if ( uBlackAndWhite ) color = toBW( color );
-
-  color.rgb = pow( color.rgb, vec3( uC ) );
   gl_FragColor = vec4( color.rgb, 1.0 );
 }
