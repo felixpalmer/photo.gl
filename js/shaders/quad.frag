@@ -18,6 +18,7 @@ varying vec2 vUv;
 #include polar.glsl
 #include fisheye.glsl
 #include twirl.glsl
+#include waves.glsl
 #include pixellate.glsl
 #include vignette.glsl
 
