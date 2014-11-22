@@ -24,8 +24,8 @@ varying vec2 vUv;
 
 void main() {
   vec3 color = vec3( 0.0 );
-  color = drawGradient();
-  color = drawImage();
+  vec3 grad = drawGradient();
+  vec3 image = drawImage();
 
   vec2 uv = vUv;
   vec2 polar = toPolar( uv );

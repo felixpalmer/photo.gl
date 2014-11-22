@@ -1,10 +1,11 @@
-define( [ 'gl', 'params', 'utils', 'shader!quad.vert', 'shader!quad.frag' ],
-function ( gl, params, utils, quadVert, quadFrag ) {
+define( [ 'gl', 'params', 'utils', 'shader!simple.vert', 'shader!simple.frag', 'shader!quad.vert', 'shader!quad.frag' ],
+function ( gl, params, utils, simpleVert, simpleFrag, quadVert, quadFrag ) {
   var quad = {
     init: function () {
       console.log( 'Initialized quad with context', gl );
 
       // Create shader program for quad
+      //quad.program = utils.createProgram( simpleVert.value, simpleFrag.value );
       quad.program = utils.createProgram( quadVert.value, quadFrag.value );
       gl.useProgram( quad.program );
 
