@@ -1,10 +1,11 @@
-define( [ 'gl', 'params', 'utils', 'shader!quad.vert', 'shader!quad.frag' ],
-function ( gl, params, utils, quadVert, quadFrag ) {
+define( [ 'gl', 'params', 'utils', 'shader!simple.vert', 'shader!simple.frag', 'shader!quad.vert', 'shader!quad.frag' ],
+function ( gl, params, utils, simpleVert, simpleFrag, quadVert, quadFrag ) {
   var quad = {
     init: function () {
       console.log( 'Initialized quad with context', gl );
 
       // Create shader program for quad
+      //quad.program = utils.createProgram( simpleVert.value, simpleFrag.value );
       quad.program = utils.createProgram( quadVert.value, quadFrag.value );
       gl.useProgram( quad.program );
 
@@ -42,7 +43,7 @@ function ( gl, params, utils, quadVert, quadFrag ) {
         gl.texParameteri( gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST );
         gl.texParameteri( gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST );
         gl.texImage2D( gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image );
-        if ( onload ) onload();
+        if ( onload ) {  onload(); }
       };
     },
     draw: function () {
@@ -50,6 +51,14 @@ function ( gl, params, utils, quadVert, quadFrag ) {
       var p = gl.getUniformLocation( quad.program, 'uBlackAndWhite' );
       gl.uniform1i( p, params.blackAndWhite );
       
+      p = gl.getUniformLocation( quad.program, 'uA' );
+      gl.uniform1f( p, params.a );
+      p = gl.getUniformLocation( quad.program, 'uB' );
+      gl.uniform1f( p, params.b );
+      p = gl.getUniformLocation( quad.program, 'uC' );
+      gl.uniform1f( p, params.c );
+      p = gl.getUniformLocation( quad.program, 'uD' );
+      gl.uniform1f( p, params.d );
       
       gl.drawArrays( gl.TRIANGLES, 0, quad.vertices.length / 2 );
     }
