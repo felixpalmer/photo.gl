@@ -8,6 +8,7 @@ uniform float uA;
 uniform float uB;
 uniform float uC;
 uniform float uD;
+uniform float uTime;
 
 varying vec2 vCoordinate;
 varying vec2 vUv;

@@ -26,9 +26,10 @@ define( [ 'dat', 'params', 'quad' ], function ( dat, params, quad ) {
     frame: 0,
     needsRender: true,
     render: function() {
-      requestAnimationFrame( app.render ); // Enable for continuous rendering
-      if ( app.needsRender || ( app.frame++ % 10 ) === 1 ) { // Unless forced, only render every tenth frame
-        app.needsRender = false;
+      requestAnimationFrame( app.render );
+      if ( ( app.frame++ % 10 ) === 1 || app.needsRender ) { // Unless forced, only render every tenth frame
+        params.time = app.frame / 100;
+        //app.needsRender = false; // Disable to render all the time
         quad.draw();
       }
     }

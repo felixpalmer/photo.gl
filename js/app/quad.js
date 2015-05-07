@@ -59,6 +59,8 @@ function ( gl, params, utils, simpleVert, simpleFrag, quadVert, quadFrag ) {
       gl.uniform1f( p, params.c );
       p = gl.getUniformLocation( quad.program, 'uD' );
       gl.uniform1f( p, params.d );
+      p = gl.getUniformLocation( quad.program, 'uTime' );
+      gl.uniform1f( p, params.time );
       
       gl.drawArrays( gl.TRIANGLES, 0, quad.vertices.length / 2 );
     }

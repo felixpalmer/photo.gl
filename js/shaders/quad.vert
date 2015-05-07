@@ -4,6 +4,7 @@ uniform float uA;
 uniform float uB;
 uniform float uC;
 uniform float uD;
+uniform float uTime;
 
 attribute vec2 aCoordinate;
 

@@ -6,6 +6,7 @@ define( function () {
     b: 1.0,
     c: 1.0,
     d: 1.0,
+    time: 1.0,
     image: 'goat.jpg'
   };
 } );
