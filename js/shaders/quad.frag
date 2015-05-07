@@ -15,13 +15,14 @@ varying vec2 vUv;
 
 #include drawGradient.glsl
 #include drawImage.glsl
+#include blur.glsl
 #include toBW.glsl
 #include polar.glsl
+#include vignette.glsl
 #include fisheye.glsl
-#include twirl.glsl
 #include waves.glsl
 #include pixellate.glsl
-#include vignette.glsl
+#include twirl.glsl
 
 void main() {
   vec3 color = vec3( 0.0 );
