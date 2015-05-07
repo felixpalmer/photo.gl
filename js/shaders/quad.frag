@@ -32,8 +32,7 @@ void main() {
   vec2 uv = vUv;
   vec2 polar = toPolar( uv );
   uv = fromPolar( polar );
-  color = texture2D( uImage, uv ).rgb;
 
-  if ( uBlackAndWhite ) color = toBW( color );
+  color = texture2D( uImage, uv ).rgb;
   gl_FragColor = vec4( color.rgb, 1.0 );
 }
