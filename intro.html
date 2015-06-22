@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Image editing with WebGL</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+        <style>
+          .slide .right, .slide.cover .right {
+              height: 100%;
+              width: 25%;
+              top: 0;
+              left: auto;
+              right: 0;
+              position: absolute;
+          }
+          .tiny {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 200px;
+              width: 200px;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .tiny-top {
+              position: absolute;
+              right: 2%;
+              top: 3%;
+              height: 200px;
+              width: 200px;
+              box-shadow: 2px 2px 10px black;
+          }
+          .small {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 40%;
+              width: 40%;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .small-top {
+              position: absolute;
+              right: 2%;
+              top: 3%;
+              height: 40%;
+              width: 40%;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .medium {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 50%;
+              width: 96%;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .tiny, .tiny-top, .small-top, .small, .medium {
+              background-color: white;
+          }
+
+          .tiny:hover, .tiny-top:hover, .small-top:hover, .small:hover, .medium:hover {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 94%;
+              width: 96%;
+          }
+
+          .slide code {
+            font-size: 16pt;
+          }
+
+          .fullscreen h2 {
+              margin:10px 0 0;
+              color:#FFF;
+              text-align:center;
+              font-size:80px;
+              text-shadow: 1px 1px 7px #000;
+          }
+          .fullscreen p {
+              margin:10px 0 0;
+              text-align:center;
+              color:#FFF;
+              font-style:italic;
+              font-size:30px;
+              text-shadow: 1px 1px 7px #000;
+          }
+          .fullscreen p a {
+              color:#FFF;
+          }
+          .fullscreen img {
+              width:100%;
+          }
+          .twitter {
+            position: relative;
+            color: #808080;
+            text-align: right;
+            font-size: 10pt;
+            padding: 10px 25px; 
+          }
+        </style>
+</head>
+<body class="list">
+	<header class="caption">
+		<p>Felix Palmer | @pheeelicks | www.pheelicks.com</p>
+	</header>
+	<section class="slide cover fullscreen"><div>
+        <img src="pictures/poorGoat.png"/>
+		<h2>Základy programování</h2>
+        </br>
+		<p>Felix Palmer | @pheeelicks | www.pheelicks.com</p>
+        <p><a href="http://felixpalmer.github.io/photo.gl/intro.html">felixpalmer.github.io/photo.gl/intro.html</a></p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Základy programování</h2>
+		<ul>
+			<li>Proměny &amp; Operace</li>
+			<li>Funkce</li>
+			<li>Podmínky</li>
+		</ul>
+        </br>
+        </br>
+        <p><a href="http://felixpalmer.github.io/photo.gl/intro.html">felixpalmer.github.io/photo.gl/presentation.html</a></p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Proměny</h2>
+        <code>float height = 150.0;</code></br>
+        <code>height = 160.0;</code></br>
+        <br>
+        <ul>
+            <li>height je jméno proměny</li>
+            <li>150.0 je hodnota</li>
+            <li>float je typ</li>
+        </ul>
+        <p>Proměna a krabice do které se dá uložit informace</p>
+	</div></section>
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
