@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>Image editing with WebGL</title>
+	<title>Základy programování</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -138,7 +138,7 @@
             <li>150.0 je hodnota</li>
             <li>float je typ</li>
         </ul>
-        <p>Proměna a krabice do které se dá uložit informace</p>
+        <p class="note">Proměna je krabice do které se dá uložit informace</p>
 	</div></section>
 	<section class="slide"><div>
 		<h2>Operace</h2>
@@ -150,7 +150,7 @@
             <li>height a shoeHeight jsou proměny</li>
             <li>hodnota totalHeight je jejich součet</li>
         </ul>
-        <p>Pár operací: +, -, *, /</p>
+        <p class="note">Pár operací: +, -, *, /</p>
 	</div></section>
 	<section class="slide"><div>
 		<h2>Podmínky</h2>
@@ -172,7 +172,8 @@
         <code>&nbsp;&nbsp;if ( height &lt; 140.0 ) {</code></br>
         <code>&nbsp;&nbsp;&nbsp;&nbsp;shoeHeight = 20.0;</code></br>
         <code>&nbsp;&nbsp;}</code></br>
-        <code>&nbsp;&nbsp;return height + shoeHeight; // <- výsledek</code></br>
+        <code>&nbsp;&nbsp;float result = height + shoeHeight;</code></br>
+        <code>&nbsp;&nbsp;return result; // <- výsledek</code></br>
         <code>}</code></br>
         <br>
 	</div></section>
@@ -191,6 +192,19 @@
 			<li>Funkce: sada instrukcí</li>
 		</ul>
         <br>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Vektory</h2>
+        <code>vec3 red = vec3( 1.0, 0.0, 0.0 ); // RGB, červená</code></br>
+        <code>vec3 blue = vec3( 0.0, 0.0, 1.0 ); // modrá</code></br>
+        <code>vec3 white = ?;</code></br>
+        <br>
+        <code>vec3 color = vec3( 0.0, 0.0, 0.0 ); // černá</code></br>
+        <code>color.b = 1.0; // -> modrá</code></br>
+        <code>color.r = 1.0; // -> fialová</code></br>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>DEMO</h2>
 	</div></section>
 	<div class="progress"></div>
 	<script src="shower/shower.min.js"></script>
