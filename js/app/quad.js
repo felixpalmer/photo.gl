@@ -1,5 +1,5 @@
-define( [ 'gl', 'params', 'utils', 'shader!simple.vert', 'shader!simple.frag', 'shader!quad.vert', 'shader!quad.frag' ],
-function ( gl, params, utils, simpleVert, simpleFrag, quadVert, quadFrag ) {
+define( [ 'gl', 'params', 'utils', 'shader!examples.vert', 'shader!examples.frag', 'shader!simple.vert', 'shader!simple.frag'],
+function ( gl, params, utils, examplesVert, examplesFrag, simpleVert, simpleFrag ) {
   var quad = {
     init: function () {
       console.log( 'Initialized quad with context', gl );
@@ -51,7 +51,7 @@ function ( gl, params, utils, simpleVert, simpleFrag, quadVert, quadFrag ) {
       } else if ( program === 'imm' ) {
         quad.program = utils.createProgram( simpleVert.value, simpleFrag.value );
       } else if ( program === 'examples' ) {
-        quad.program = utils.createProgram( quadVert.value, quadFrag.value );
+        quad.program = utils.createProgram( examplesVert.value, examplesFrag.value );
       } else {
         console.log( 'Unknown program requested: ', program );
       }
