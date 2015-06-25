@@ -5,6 +5,9 @@ define( [ 'dat', 'params', 'quad' ], function ( dat, params, quad ) {
       var loadImage = function() {
         quad.loadImage( 'js/textures/' + params.image, onGuiChange );
       };
+      var loadProgram = function() {
+        quad.loadProgram( params.program, onGuiChange );
+      };
 
       var onGuiChange = function() {
         app.needsRender = true;
@@ -14,6 +17,7 @@ define( [ 'dat', 'params', 'quad' ], function ( dat, params, quad ) {
       var gui = new dat.GUI();
       gui.add( params, 'blackAndWhite' ).onChange( onGuiChange );
       gui.add( params, 'image', ['cat.jpg', 'goat.jpg', 'mountain.jpg'] ).onChange( loadImage );
+      gui.add( params, 'program', ['simple', 'image', 'examples'] ).onChange( loadProgram );
       gui.add( params, 'a', -1, 1 ).onChange( onGuiChange );
       gui.add( params, 'b', -10, 10 ).onChange( onGuiChange );
       gui.add( params, 'c', 0, 10 ).onChange( onGuiChange );

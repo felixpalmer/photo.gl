@@ -5,8 +5,7 @@ function ( gl, params, utils, simpleVert, simpleFrag, quadVert, quadFrag ) {
       console.log( 'Initialized quad with context', gl );
 
       // Create shader program for quad
-      //quad.program = utils.createProgram( simpleVert.value, simpleFrag.value );
-      quad.program = utils.createProgram( quadVert.value, quadFrag.value );
+      quad.program = utils.createProgram( simpleVert.value, simpleFrag.value );
       gl.useProgram( quad.program );
 
       // Get handle on coordinate attribute in shader
@@ -45,6 +44,20 @@ function ( gl, params, utils, simpleVert, simpleFrag, quadVert, quadFrag ) {
         gl.texImage2D( gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image );
         if ( onload ) {  onload(); }
       };
+    },
+    loadProgram: function ( program, onload ) {
+      if ( program === 'simple' ) {
+        quad.program = utils.createProgram( simpleVert.value, simpleFrag.value );
+      } else if ( program === 'imm' ) {
+        quad.program = utils.createProgram( simpleVert.value, simpleFrag.value );
+      } else if ( program === 'examples' ) {
+        quad.program = utils.createProgram( quadVert.value, quadFrag.value );
+      } else {
+        console.log( 'Unknown program requested: ', program );
+      }
+      
+      gl.useProgram( quad.program );
+      if ( onload ) {  onload(); }
     },
     draw: function () {
       // Update uniforms from params object
