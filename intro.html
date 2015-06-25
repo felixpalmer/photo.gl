@@ -119,7 +119,8 @@
 	<section class="slide"><div>
 		<h2>Základy programování</h2>
 		<ul>
-			<li>Proměny &amp; Operace</li>
+			<li>Proměny</li>
+			<li>Operace</li>
 			<li>Podmínky</li>
 			<li>Funkce</li>
 		</ul>
@@ -163,6 +164,33 @@
             <li>když je výsledek podmínky pravdivý, tak se exekutuje vše mezi { a }</li>
             <li>jinak se { } přeskočí</li>
         </ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Funkce</h2>
+        <code>float totalHeight( height ) { // <- parametry</code></br>
+        <code>&nbsp;&nbsp;float shoeHeight = 10.0;</code></br>
+        <code>&nbsp;&nbsp;if ( height &lt; 140.0 ) {</code></br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;shoeHeight = 20.0;</code></br>
+        <code>&nbsp;&nbsp;}</code></br>
+        <code>&nbsp;&nbsp;return height + shoeHeight; // <- výsledek</code></br>
+        <code>}</code></br>
+        <br>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Funkce</h2>
+        <code>float felixHeight = totalHeight( 180.0 ) { // = 190.0</code></br>
+        <code>float barboraHeight = totalHeight( 135.0 ) { // = 155.0</code></br>
+        <br>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Zopakování</h2>
+		<ul>
+			<li>Proměny: úložiště pro data</li>
+			<li>Operace: manipulace dat</li>
+			<li>Podmínky: otázky</li>
+			<li>Funkce: sada instrukcí</li>
+		</ul>
+        <br>
 	</div></section>
 	<div class="progress"></div>
 	<script src="shower/shower.min.js"></script>
