@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Základy programování</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+        <style>
+          .slide .right, .slide.cover .right {
+              height: 100%;
+              width: 25%;
+              top: 0;
+              left: auto;
+              right: 0;
+              position: absolute;
+          }
+          .tiny {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 200px;
+              width: 200px;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .tiny-top {
+              position: absolute;
+              right: 2%;
+              top: 3%;
+              height: 200px;
+              width: 200px;
+              box-shadow: 2px 2px 10px black;
+          }
+          .small {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 40%;
+              width: 40%;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .small-top {
+              position: absolute;
+              right: 2%;
+              top: 3%;
+              height: 40%;
+              width: 40%;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .medium {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 50%;
+              width: 96%;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .tiny, .tiny-top, .small-top, .small, .medium {
+              background-color: white;
+          }
+
+          .tiny:hover, .tiny-top:hover, .small-top:hover, .small:hover, .medium:hover {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 94%;
+              width: 96%;
+          }
+
+          .slide code {
+            font-size: 16pt;
+          }
+
+          .fullscreen h2 {
+              margin:10px 0 0;
+              color:#FFF;
+              text-align:center;
+              font-size:80px;
+              text-shadow: 1px 1px 7px #000;
+          }
+          .fullscreen p {
+              margin:10px 0 0;
+              text-align:center;
+              color:#FFF;
+              font-style:italic;
+              font-size:30px;
+              text-shadow: 1px 1px 7px #000;
+          }
+          .fullscreen p a {
+              color:#FFF;
+          }
+          .fullscreen img {
+              width:100%;
+          }
+          .twitter {
+            position: relative;
+            color: #808080;
+            text-align: right;
+            font-size: 10pt;
+            padding: 10px 25px; 
+          }
+        </style>
+</head>
+<body class="list">
+	<header class="caption">
+		<p>Felix Palmer | @pheeelicks | www.pheelicks.com</p>
+	</header>
+	<section class="slide cover fullscreen"><div>
+        <img alt="goat" src="pictures/poorGoat.png"/>
+		<h2>Základy programování</h2>
+        </br>
+		<p>Felix Palmer | @pheeelicks | www.pheelicks.com</p>
+        <p><a href="http://felixpalmer.github.io/photo.gl/intro.html">felixpalmer.github.io/photo.gl/intro.html</a></p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Základy programování</h2>
+		<ul>
+			<li>Proměny</li>
+			<li>Operace</li>
+			<li>Podmínky</li>
+			<li>Funkce</li>
+		</ul>
+        </br>
+        </br>
+        <p><a href="http://felixpalmer.github.io/photo.gl/intro.html">felixpalmer.github.io/photo.gl/intro.html</a></p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Proměny</h2>
+        <code>float height = 150.0;</code></br>
+        <code>height = 160.0;</code></br>
+        <br>
+        <ul>
+            <li>height je jméno proměny</li>
+            <li>150.0 je hodnota</li>
+            <li>float je typ</li>
+        </ul>
+        <p class="note">Proměna je krabice do které se dá uložit informace</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Operace</h2>
+        <code>float height = 150.0;</code></br>
+        <code>float shoeHeight = 10.0;</code></br>
+        <code>float totalHeight = height + shoeHeight;</code></br>
+        <br>
+        <ul>
+            <li>height a shoeHeight jsou proměny</li>
+            <li>hodnota totalHeight je jejich součet</li>
+        </ul>
+        <p class="note">Pár operací: +, -, *, /</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Podmínky</h2>
+        <code>float shoeHeight = 10.0;</code></br>
+        <code>if ( height &lt; 140.0 ) {</code></br>
+        <code>&nbsp;&nbsp;shoeHeight = 20.0;</code></br>
+        <code>}</code></br>
+        <br>
+        <ul>
+            <li>podmínka je jestlie: height < 140.0 - je to vlastně otázka</li>
+            <li>když je výsledek podmínky pravdivý, tak se exekutuje vše mezi { a }</li>
+            <li>jinak se { } přeskočí</li>
+        </ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Funkce</h2>
+        <code>float totalHeight( height ) { // <- parametry</code></br>
+        <code>&nbsp;&nbsp;float shoeHeight = 10.0;</code></br>
+        <code>&nbsp;&nbsp;if ( height &lt; 140.0 ) {</code></br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;shoeHeight = 20.0;</code></br>
+        <code>&nbsp;&nbsp;}</code></br>
+        <code>&nbsp;&nbsp;float result = height + shoeHeight;</code></br>
+        <code>&nbsp;&nbsp;return result; // <- výsledek</code></br>
+        <code>}</code></br>
+        <br>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Funkce</h2>
+        <code>float felixHeight = totalHeight( 180.0 ) { // = 190.0</code></br>
+        <code>float barboraHeight = totalHeight( 135.0 ) { // = 155.0</code></br>
+        <br>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Zopakování</h2>
+		<ul>
+			<li>Proměny: úložiště pro data</li>
+			<li>Operace: manipulace dat</li>
+			<li>Podmínky: otázky</li>
+			<li>Funkce: sada instrukcí</li>
+		</ul>
+        <br>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Vektory</h2>
+        <code>vec3 red = vec3( 1.0, 0.0, 0.0 ); // RGB, červená</code></br>
+        <code>vec3 blue = vec3( 0.0, 0.0, 1.0 ); // modrá</code></br>
+        <code>vec3 white = ?;</code></br>
+        <br>
+        <code>vec3 color = vec3( 0.0, 0.0, 0.0 ); // černá</code></br>
+        <code>color.b = 1.0; // -> modrá</code></br>
+        <code>color.r = 1.0; // -> fialová</code></br>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>DEMO</h2>
+	</div></section>
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>

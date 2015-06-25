@@ -7,6 +7,7 @@ define( function () {
     c: 1.0,
     d: 1.0,
     time: 1.0,
-    image: 'goat.jpg'
+    image: 'goat.jpg',
+    program: 'simple'
   };
 } );
