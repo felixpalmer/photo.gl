@@ -3,7 +3,7 @@ Photo.gl
 
 Example of how common photo manipulation operations can be achieved using JavaScript and WebGL. The focus is on writing GLSL code.
 
-[Live demo] - coming
+This demo app is used as part of my talk on WebGL. You can see a recording of the talk [here](https://www.youtube.com/watch?v=x6fXhY17atI)
 
 Running
 =======
